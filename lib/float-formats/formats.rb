@@ -77,6 +77,8 @@ IEEE.binary :IEEE_binary64, significand: 52,exponent: 11
 IEEE.binary :IEEE_binary80, significand: 64,exponent: 15, hidden_bit: false, min_encoded_exp: 1
 IEEE.binary :IEEE_binary128, significand: 112,exponent: 15
 
+IEEE.binary :IEEE_binary16_pg, significand: 9, exponent: 6, bias: 47
+
 # IEEE 754 in big endian order (SPARC, Motorola 68k, PowerPC)
 
 IEEE.binary :IEEE_binary16_BE, significand: 10, exponent: 5, endianness: :big_endian
@@ -85,6 +87,7 @@ IEEE.binary :IEEE_binary64_BE, significand: 52,exponent: 11, endianness: :big_en
 IEEE.binary :IEEE_binary80_BE, significand: 64,exponent: 15, endianness: :big_endian, hidden_bit: false, min_encoded_exp: 1
 IEEE.binary :IEEE_binary128_BE, significand: 112,exponent: 15, endianness: :big_endian
 
+IEEE.binary :IEEE_binary16_pg_BE, significand: 9, exponent: 6, bias: 47, endianness: :big_endian
 
 # some IEEE745r interchange binary formats
 
@@ -99,12 +102,14 @@ IEEE.interchange_binary :IEEE_binary1024_BE, 1024, endianness: :big_endian
 # old names
 IEEE_binaryx = IEEE_binary80
 IEEE_HALF = IEEE_binary16
+IEEE_HALF_PG = IEEE_binary16_pg
 IEEE_SINGLE = IEEE_binary32
 IEEE_DOUBLE = IEEE_binary64
 IEEE_EXTENDED = IEEE_binary80
 IEEE_QUAD = IEEE_binary128
 IEEE_128 = IEEE_binary128
 IEEE_H_BE = IEEE_binary16_BE
+IEEE_H_PG_BE = IEEE_binary16_pg_BE
 IEEE_S_BE = IEEE_binary32_BE
 IEEE_D_BE = IEEE_binary64_BE
 IEEE_X_BE = IEEE_binary80_BE
